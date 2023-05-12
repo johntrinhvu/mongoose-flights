@@ -1,7 +1,6 @@
 <%- include('../partials/header') %>
 
-<h2>Flight List</h2>
-<table>
+<table id="list">
     <thead>
       <tr>
         <th>Airline</th>
@@ -11,15 +10,15 @@
       </tr>
     </thead>
     <tbody>
-      <!-- Write the line of EJS to iterate over movies using forEach -->
-      <% flights.forEach(function(f) { %>
-        <tr>
-          <td><%= f.airline.enum %></td>
-          <td><%= f.airport %></td>
-          <td><%= f.flightNo %></td>
-        </tr>
-      <!-- Close the forEach using EJS here -->
-      <% }); %>
+        <% flights.forEach(function(f) { %>
+            <tr>
+                <td><%= f.airline %></td>
+                <td><%= f.airport %></td>
+                <td><%= f.flightNo %></td>
+                <td><%= f.departs %></td>
+                <td><a href="/flights/<%= f._id %>">FLIGHT DETAILS</a></td>
+            </tr>
+        <% }); %>
     </tbody>
 </table>
 

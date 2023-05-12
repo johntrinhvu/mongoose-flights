@@ -1,5 +1,33 @@
 <%- include('../partials/header') %>
 
-<h2>New Flight</h2>
+<form action="/flights" method="POST">
+  <label>Airline:
+    <select name="airline">
+        <% airlines.forEach(function(a) { %>
+            <option value="<%= a %>"><%= a %></option>
+
+        <% }); %>
+    </select>
+  </label><br>
+
+  <label>Airport:
+    <select name="airport">
+        <% airports.forEach(function(a) { %>
+            <option value="<%= a %>"><%= a %></option>
+        <% }); %>
+    </select>
+  </label><br>
+
+  <label>Flight Number:
+    <input type="number" name="flightNo">
+  </label><br>
+
+  <label>Departs:
+    <input type="text" name="departs">
+  </label><br><br>
+
+  <button type="submit">Add Flight</button>
+</form>
+<p><%= errorMsg %></p>
 
 <%- include('../partials/footer') %>
