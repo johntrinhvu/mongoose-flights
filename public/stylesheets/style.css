@@ -68,7 +68,7 @@ nav > a.active {
 
 #new-form *,
 #add-destination-form *,
-#add-performer-form * {
+#add-ticket-form * {
   font-size: 20px;
   padding: 5px;
   border-radius: 5px;
@@ -121,7 +121,7 @@ table td {
 }
 
 #add-destination-form,
-#add-performer-form {
+#add-ticket-form {
   display: grid;
   grid-template-columns: auto auto;
   grid-gap: 1rem;
@@ -129,7 +129,7 @@ table td {
 }
 
 #add-destination-form input[type="submit"],
-#add-performer-form input[type="submit"]  {
+#add-ticket-form input[type="submit"]  {
   width: 10rem;
   grid-column: 2 / 3;
 }
