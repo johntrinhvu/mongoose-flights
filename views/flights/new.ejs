@@ -5,7 +5,6 @@
     <select name="airline">
         <% airlines.forEach(function(a) { %>
             <option value="<%= a %>"><%= a %></option>
-
         <% }); %>
     </select>
   </label><br>
@@ -23,7 +22,7 @@
   </label><br>
 
   <label>Departs:
-    <input type="text" name="departs">
+    <input type="date" name="departs">
   </label><br><br>
 
   <button type="submit">Add Flight</button>

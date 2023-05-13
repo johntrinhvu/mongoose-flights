@@ -40,12 +40,12 @@ const flightSchema = new Schema({
 
   departs: {
     type: Date, 
-    Default: () => {
-      return new Date(new Date().setFullYear(new Date().getFullYear() + 1))
-    }
+    default: function() {
+      return new Date().getFullYear();
+    },
   },
 
-  destinations: [destinationSchema],
+  destinations: [destinationSchema]
 }, {
   timestamps: true
 });

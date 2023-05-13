@@ -10,18 +10,18 @@ module.exports = {
 
 async function index(req, res) {
     const flights = await Flight.find({});
-    res.render('flights/index', { flights });
+    res.render('flights/index', { title: 'All Flights', flights });
 
 }
 
 function newFlight(req, res) {
-    res.render('flights/new', { errorMsg: '', airlines, airports});
+    res.render('flights/new', { title: 'Add Flight', errorMsg: '', airlines, airports});
 
 }
 
 async function show(req, res) {
   const flight = await Flight.findById(req.params.id);
-  res.render('flights/show', { title: 'Flight Details', flight})
+  res.render('flights/show', { title: 'Flight Details', flight, airlines, airports})
   
 }
 
